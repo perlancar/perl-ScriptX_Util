@@ -122,7 +122,7 @@ sub detect_scriptx_script {
         #}
 
         for (split /^/, $str) {
-            if (/^\s*(use|require)\s+(ScriptX)?)(\s|;|$)/) {
+            if (/^\s*(use|require)\s+(ScriptX)(\s|;|$)/) {
                 $yesno = 1;
                 $extrameta{'func.module'} = $2;
                 last DETECT;

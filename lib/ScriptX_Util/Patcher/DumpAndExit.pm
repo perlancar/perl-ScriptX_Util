@@ -26,7 +26,7 @@ sub _dump {
     print "# END DUMP ScriptX\n";
 }
 
-patch_package('ScriptX', [
+our $handle = patch_package('ScriptX', [
     {
         action => 'replace',
         sub_name => 'import',

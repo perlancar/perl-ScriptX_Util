@@ -63,6 +63,7 @@ sub dump_scriptx_script {
     if ($args{skip_detect}) {
         $detres = [200, "OK (skip_detect)", 1, {"func.module"=>"ScriptX", "func.reason"=>"skip detect, forced"}];
     } else {
+        require ScriptX_Util;
         $detres = ScriptX_Util::detect_scriptx_script(
             filename => $filename);
         return $detres if $detres->[0] != 200;
