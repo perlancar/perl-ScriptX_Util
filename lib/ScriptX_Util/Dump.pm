@@ -16,7 +16,7 @@ our %SPEC;
 
 $SPEC{dump_scriptx_script} = {
     v => 1.1,
-    summary => 'Run a Getopt::Long-based script but only to '.
+    summary => 'Run a ScriptX-based script but only to '.
         'dump the import arguments',
     description => <<'_',
 
@@ -29,7 +29,7 @@ documentation about it or do other things (e.g. `App::shcompgen` to generate a
 completion script for the original script).
 
 CLI script needs to use `ScriptX`. This is detected currently by a simple regex.
-If script is not detected as using `Getopt::Long`, status 412 is returned.
+If script is not detected as using `ScriptX`, status 412 is returned.
 
 _
     args => {
